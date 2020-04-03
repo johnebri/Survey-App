@@ -9,3 +9,7 @@ php artisan preset bootstrap
 
 
 php artisan ui bootstrap
+
+create a model with a migration
+php artisan make:model Questionnaire -m
+
