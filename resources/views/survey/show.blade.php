@@ -38,40 +38,38 @@
                     </div>
                 @endforeach
 
-                <button type="submit" class="btn btn-dark">Complete Survey</button>
-            </form>
+                
 
-            <!-- <div class="card">
-                <div class="card-header">Create New Questionnaire</div>
+                <div class="card mt-4">
+                    <div class="card-header">Your Information</div>
 
-                <div class="card-body">
-                  <form action="/questionnaires" method="post">
+                    <div class="card-body">
 
-                    @csrf 
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input name="survey[name]" type="text" class="form-control" id="name" aria-describedby="name" placeholder="Enter name">
+                            <small id="nameHelp" class="form-text text-muted">Hello, whats your name?</small>
+                            @error('name')
+                                <small class="text-danger">{{ $message }}</small>
+                            @enderror
+                        </div>
 
-                    <div class="form-group">
-                        <label for="title">Title</label>
-                        <input name="title" type="text" class="form-control" id="title" aria-describedby="title" placeholder="Enter Title">
-                        <small id="titleHelp" class="form-text text-muted">Give your questionnaire a title that attracts attention</small>
-                        @error('title')
-                            <small class="text-danger">{{ $message }}</small>
-                        @enderror
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <input name="survey[email]" type="text" class="form-control" id="email" aria-describedby="email" placeholder="Enter email">
+                            <small id="emailHelp" class="form-text text-muted">Your Email Please</small>
+                            @error('email')
+                                <small class="text-danger">{{ $message }}</small>
+                            @enderror
+                        </div>
+
+                        <div>
+                            <button type="submit" class="btn btn-dark">Complete Survey</button>
+                        </div>
+
                     </div>
-
-                    <div class="form-group">
-                        <label for="purpose">Purpose</label>
-                        <input name="purpose" type="text" class="form-control" id="purpose" aria-describedby="purpose" placeholder="Enter purpose">
-                        <small id="purposeHelp" class="form-text text-muted">Giving a purpose will increase responses</small>
-                        @error('purpose')
-                            <small class="text-danger">{{ $message }}</small>
-                        @enderror
-                    </div>
-
-                    <button type="submit" class="btn btn-primary">Create Questionnaire</button>
-
-                  </form>
                 </div>
-            </div> -->
+            </form>
         </div>
     </div>
 </div>
