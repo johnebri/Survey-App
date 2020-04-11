@@ -15,7 +15,7 @@
                     <div class="form-group">
                         <label for="question">Question</label>
                         <input name="question[question]" 
-                            type="text" class="form-control" value="{{ old('question.question') }}" id="question" aria-describedby="question" placeholder="Enter question">
+                            type="text" class="form-control" value="{{ old('question.question') }}" id="question" aria-describedby="question" placeholder="Enter question" autofocus>
                         <small id="questionHelp" class="form-text text-muted">Ask simple and to-the-point questions for best results</small>
                         @error('question.question')
                             <small class="text-danger">{{ $message }}</small>
